@@ -1,5 +1,5 @@
 {% set name = "biosphere" %}
-{% set version = "0.2.0" %}
+{% set version = "0.2.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,11 +7,11 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: cfdfe9cd0bd8bf60e90141ef386338173f31633147a409768723fbcbd87f34c2
+  sha256: 07ad2affea67cfdd2380263a74ad4ffbe9ad1e2c4436ad4411ab2987cd125631
 
 build:
-  number: 1
-  script: "{{ PYTHON }} -m pip install . -vv"
+  number: 0
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   build:
@@ -39,7 +39,7 @@ about:
   home: https://github.com/mlondschien/biosphere
   license: BSD-3-Clause
   license_file: LICENSE
-  summary: 'Simple, fast random forests'
+  summary: Simple, fast random forests
   description: |
     Random forests with a runtime of `O(n d log(n) + n_trees d n max_depth)` instead of `O(n_tree mtry n log(n) max_depth)`.
   dev_url: https://github.com/mlondschien/biosphere
