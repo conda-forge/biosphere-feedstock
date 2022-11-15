@@ -10,7 +10,7 @@ source:
   sha256: baeb8f091044dbd00f5e427b6123d4e1d33e317242180e2e9cb942cbda28edce
 
 build:
-  number: 1
+  number: 2
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
@@ -19,6 +19,7 @@ requirements:
     - cross-python_{{ target_platform }}     # [build_platform != target_platform]
     - {{ compiler('c') }}
     - {{ compiler('rust') }}
+    - maturin                                # [build_platform != target_platform]
   host:
     - python
     - pip
