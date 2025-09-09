@@ -1,5 +1,5 @@
 {% set name = "biosphere" %}
-{% set version = "0.4.0" %}
+{% set version = "0.4.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: d4e5b3e2095a4c3a99992f03b798bded70cf5ca2cb9f20e122079b024242be49
+  sha256: 98992c243acb63c71792918b5e11cad93ee844de2a4a8d10f522ae854f39445b
 
 build:
   number: 0
